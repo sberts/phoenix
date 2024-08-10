@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 RUN apt-get -y update && apt-get -y upgrade
 
 RUN apt-get -y install tmux vim python3 python3-pip python3-venv gnupg \
-  software-properties-common wget curl unzip nodejs npm
+  software-properties-common wget curl unzip nodejs npm jq yq
 
 RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | \
   tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
